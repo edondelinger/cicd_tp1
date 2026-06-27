@@ -9,7 +9,7 @@ def test_calculer_interets_classique():
 def test_calculer_mensualite_taux_zero():
     # Test du cas limite : crédit sans intérêt
     # 12 000€ sur 12 mois à 0% = 1 000€ par mois
-    assert calculer_mensualite(12000, 0, 12) == 10020.0
+    assert calculer_mensualite(12000, 0, 12) == 1000.0
 
 def test_calculer_interets_valeur_negative_leve_erreur():
     # On vérifie que notre application se défend bien si on met une valeur négative
