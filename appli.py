@@ -9,7 +9,7 @@ def calculer_mensualite(capital: float, taux_annuel: float, mois: int) -> float:
     """Calcule la mensualité fixe pour un remboursement de prêt."""
     if capital <= 0 or mois <= 0:
         raise ValueError("Le capital et la durée doivent être supérieurs à 0.")
-    
+
     # Si le taux est nul, c'est un crédit à taux zéro
     if taux_annuel == 0:
         return round(capital / mois, 2)
