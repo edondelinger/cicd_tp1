@@ -13,9 +13,9 @@ def calculer_mensualite(capital: float, taux_annuel: float, mois: int) -> float:
     # Si le taux est nul, c'est un crédit à taux zéro
     if taux_annuel == 0:
         return round(capital / mois, 2)
-        
+
     taux_mensuel = (taux_annuel / 100) / 12
-    
+
     # Formule mathématique du crédit à mensualité constante
     mensualite = (capital * taux_mensuel) / (1 - (1 + taux_mensuel) ** -mois)
     return round(mensualite, 2)
