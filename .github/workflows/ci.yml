@@ -26,3 +26,16 @@ jobs:
         run: pip install pytest
       - name: Exécution des tests unitaires
         run: pytest test_calculatrice.py
+
+  security:
+    runs-on: ubuntu-latest
+    needs: tests # Se lance après les tests
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Installation de Bandit
+        run: pip install bandit
+      - name: Scan de sécurité
+        run: bandit -r appli.py
