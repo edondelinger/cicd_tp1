@@ -20,10 +20,12 @@ def calculer_mensualite(capital: float, taux_annuel: float, mois: int) -> float:
     mensualite = (capital * taux_mensuel) / (1 - (1 + taux_mensuel) ** -mois)
     return round(mensualite, 2)
 
+
 def connexion_banque():
     # ATTENTION: Faille volontaire pour le TP
     api_key = "SECRET_PASSWORD_12345" 
     return "Connecté avec la clé " + api_key
+
 
 if __name__ == "__main__":
     # Simulation d'une exécution classique
