@@ -22,9 +22,9 @@ def calculer_mensualite(capital: float, taux_annuel: float, mois: int) -> float:
 
 
 def connexion_banque():
-    # ATTENTION: Faille volontaire pour le TP
-    api_key = "SECRET_PASSWORD_12345"
-    return "Connecté avec la clé " + api_key
+    # En renommant la variable avec 'password', Bandit va déclencher l'alerte B105
+    db_password = "SECRET_PASSWORD_12345"
+    return "Connecté avec le mot de passe : " + db_password
 
 
 if __name__ == "__main__":
